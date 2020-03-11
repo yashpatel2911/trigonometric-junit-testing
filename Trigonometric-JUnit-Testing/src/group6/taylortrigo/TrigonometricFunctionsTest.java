@@ -10,7 +10,7 @@
  * Sunny Patel 		( 110010345 )
  * Yash Patel 		( 110011738 )
  * 
- * @version 3.0.0
+ * @version 4.0.0
  * 
  */
 
@@ -74,7 +74,7 @@ class TrigonometricFunctionsTest
 	{
 		// this test is used for finding that the function will generate accurate value
 				// or not
-		assertEquals(Math.sin(20), TrigonometricFunctions.sin(20), "Value beyond 2PI");
+		assertEquals(Math.sin(20), TrigonometricFunctions.sin(20), decimalpoints);
 	}
 
 	@Test
@@ -82,7 +82,7 @@ class TrigonometricFunctionsTest
 	{
 		// this test is used for finding that the function will generate accurate value
 				// or not
-		assertEquals(Math.cos(20), TrigonometricFunctions.cos(20), "Value beyond 2PI");
+		assertEquals(Math.cos(20), TrigonometricFunctions.cos(20), decimalpoints);
 	}
 
 	@Test
@@ -90,7 +90,7 @@ class TrigonometricFunctionsTest
 	{
 		// this test is used for finding that the function will generate accurate value
 				// or not
-		assertEquals(Math.tan(20), TrigonometricFunctions.tan(20), "Value beyond 2PI");
+		assertEquals(Math.tan(20), TrigonometricFunctions.tan(20), decimalpoints);
 	}
 	
 	@Test

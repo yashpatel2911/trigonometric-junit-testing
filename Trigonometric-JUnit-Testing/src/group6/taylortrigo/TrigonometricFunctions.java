@@ -9,7 +9,7 @@
  * Sunny Patel 		( 110010345 )
  * Yash Patel 		( 110011738 )
  * 
- * @version 3.0.0
+ * @version 4.0.0
  * 
  */
 
@@ -32,20 +32,31 @@ public class TrigonometricFunctions
 	}
 	
 	/**
+	 * this function will normalize the radian between 0 to 2PI.
+	 * @param x is in radian
+	 * @return will return normalized radian.
+	 */
+	public static double normRadian (double x)
+	{
+		return x % (PI*2);
+	}
+	
+	/**
 	 * sin function for finding sin(x)
 	 * @param angle
 	 * @return returns generated value
 	 * @throws group6.taylortrigo.FactorialException 
 	 * @throws group6.taylortrigo.PowerException 
 	 */
-	public static double sin(double angle) throws group6.taylortrigo.PowerException, group6.taylortrigo.FactorialException
+	public static double sin(double angle) throws PowerException, FactorialException
 	{
 		double sin=0;
+		double normAngle = normRadian(angle);
 		
 		for(int i=1;i<=11;i++)
 		{
 			sin = sin + (power(-1, i-1)*
-					power(angle, (2*i)-1)/fact((2*i)-1));
+					power(normAngle, (2*i)-1)/fact((2*i)-1));
 		}
 		
 		return sin;
@@ -61,11 +72,12 @@ public class TrigonometricFunctions
 	public static double cos(double angle) throws PowerException, FactorialException
 	{
 		double cos=0;
-		
+		double normAngle = normRadian(angle);
+				
 		for(int i=1;i<=11;i++)
 		{
 			cos = cos + (power(-1, i-1)*
-					power(angle, 2*(i-1))/fact(2*(i-1)));
+					power(normAngle, 2*(i-1))/fact(2*(i-1)));
 		}
 		
 		return cos;
