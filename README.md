@@ -1,4 +1,4 @@
-````<h1>Trigonometric Functions and its Testing by Group 6.</h1>
+<h1>Trigonometric Functions and its Testing by Group 6.</h1>
 
 Trigonometric Functions such as sin, cos and tan are implemented by using taylor 
 serise and tested using JUnit in this project.
