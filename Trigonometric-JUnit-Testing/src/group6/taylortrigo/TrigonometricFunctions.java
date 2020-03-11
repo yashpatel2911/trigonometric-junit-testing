@@ -9,7 +9,7 @@
  * Sunny Patel 		( 110010345 )
  * Yash Patel 		( 110011738 )
  * 
- * @version 2.0.0
+ * @version 3.0.0
  * 
  */
 
@@ -17,6 +17,20 @@ package group6.taylortrigo;
 
 public class TrigonometricFunctions
 {
+	public static final double PI = 3.141592;			//PI Value
+	public static final double CIRCLEANGLE = 360;		//360 Angle
+	
+	
+	/**
+	 * Coverting Degree to Radian
+	 * @param x is for Degree Input
+	 * @return will return radian value of x
+	 */
+	public static double degreeToRadian (double x)
+	{
+		return (2* x * PI)/ CIRCLEANGLE ;
+	}
+	
 	/**
 	 * sin function for finding sin(x)
 	 * @param angle
@@ -106,6 +120,12 @@ public class TrigonometricFunctions
 	public static double power(double x, int y) throws PowerException
 	{
 		double value=1;
+		
+		if(y == 0)
+			return value;
+		
+		if (y<0)
+			throw new PowerException("Can't Compute Negative Power!");
 		
 		for(int i=1; i<=y; i++)
 			value = value * x;

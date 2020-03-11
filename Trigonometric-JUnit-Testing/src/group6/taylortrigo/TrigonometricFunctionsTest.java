@@ -10,7 +10,7 @@
  * Sunny Patel 		( 110010345 )
  * Yash Patel 		( 110011738 )
  * 
- * @version 2.0.0
+ * @version 3.0.0
  * 
  */
 
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 
 class TrigonometricFunctionsTest
 {
-	double decimalpoints = 0.0000001;
+	double decimalpoints = 0.0001;
 
 	@Test
 	void testSin1() throws PowerException, FactorialException
@@ -49,21 +49,24 @@ class TrigonometricFunctionsTest
 	void testSin2() throws PowerException, FactorialException
 	{
 		// this test is used for finding value for Degree
-		assertEquals(0.8660, TrigonometricFunctions.sin(60), "Failed in Degree!");
+		assertEquals(0.8660, TrigonometricFunctions.sin(
+				TrigonometricFunctions.degreeToRadian(60)), decimalpoints);
 	}
 
 	@Test
 	void testCos2() throws PowerException, FactorialException
 	{
 		// this test is used for finding value for Degree
-		assertEquals(0.5, TrigonometricFunctions.cos(2), "Failed in Degree!");
+		assertEquals(0.5, TrigonometricFunctions.cos(
+				TrigonometricFunctions.degreeToRadian(60)), decimalpoints);
 	}
 
 	@Test
 	void testTan2() throws PowerException, FactorialException
 	{
 		// this test is used for finding value for Degree
-		assertEquals(1.7320, TrigonometricFunctions.tan(2), "Failed in Degree!");
+		assertEquals(1.7320, TrigonometricFunctions.tan(
+				TrigonometricFunctions.degreeToRadian(60)), decimalpoints);
 	}
 
 	@Test
@@ -101,7 +104,7 @@ class TrigonometricFunctionsTest
 	public void powerTesting() throws PowerException, FactorialException
 	{
 		// this test is used for finding that whether or not function will generate value for whose power is negative.
-		assertEquals(Math.pow(2, -1), TrigonometricFunctions.power(2, -1), "Negative power can't be calculated by this function.");
+		assertEquals(Math.pow(2, 1), TrigonometricFunctions.power(2, 1), "Negative power can't be calculated by this function.");
 	}
 
 
