@@ -10,7 +10,7 @@
  * Sunny Patel 		( 110010345 )
  * Yash Patel 		( 110011738 )
  * 
- * @version 1.0.0
+ * @version 2.0.0
  * 
  */
 
@@ -25,49 +25,49 @@ class TrigonometricFunctionsTest
 	double decimalpoints = 0.0000001;
 
 	@Test
-	void testSin1()
+	void testSin1() throws PowerException, FactorialException
 	{
 		// this test is used for checking sin(x) value compare to Math.sin(x)
 		assertEquals(Math.sin(2), TrigonometricFunctions.sin(2), decimalpoints);
 	}
 
 	@Test
-	void testCos1()
+	void testCos1() throws PowerException, FactorialException
 	{
 		// this test is used for checking cos(x) value compare to Math.cos(x)
 		assertEquals(Math.cos(2), TrigonometricFunctions.cos(2), decimalpoints);
 	}
 
 	@Test
-	void testTan1()
+	void testTan1() throws PowerException, FactorialException
 	{
 		// this test is used for checking tan(x) value compare to Math.tan(x)
 		assertEquals(Math.tan(2), TrigonometricFunctions.tan(2), decimalpoints);
 	}
 	
 	@Test
-	void testSin2()
+	void testSin2() throws PowerException, FactorialException
 	{
 		// this test is used for finding value for Degree
 		assertEquals(0.8660, TrigonometricFunctions.sin(60), "Failed in Degree!");
 	}
 
 	@Test
-	void testCos2()
+	void testCos2() throws PowerException, FactorialException
 	{
 		// this test is used for finding value for Degree
 		assertEquals(0.5, TrigonometricFunctions.cos(2), "Failed in Degree!");
 	}
 
 	@Test
-	void testTan2()
+	void testTan2() throws PowerException, FactorialException
 	{
 		// this test is used for finding value for Degree
 		assertEquals(1.7320, TrigonometricFunctions.tan(2), "Failed in Degree!");
 	}
 
 	@Test
-	void testSin3()
+	void testSin3() throws PowerException, FactorialException
 	{
 		// this test is used for finding that the function will generate accurate value
 				// or not
@@ -75,7 +75,7 @@ class TrigonometricFunctionsTest
 	}
 
 	@Test
-	void testCos3()
+	void testCos3() throws PowerException, FactorialException
 	{
 		// this test is used for finding that the function will generate accurate value
 				// or not
@@ -83,11 +83,25 @@ class TrigonometricFunctionsTest
 	}
 
 	@Test
-	void testTan3()
+	void testTan3() throws PowerException, FactorialException
 	{
 		// this test is used for finding that the function will generate accurate value
 				// or not
 		assertEquals(Math.tan(20), TrigonometricFunctions.tan(20), "Value beyond 2PI");
+	}
+	
+	@Test
+	public void factTesting() throws PowerException, FactorialException
+	{
+		// this test is used for finding that whether or not your function will generate accurate value.
+		assertEquals(24, TrigonometricFunctions.fact(4));
+	}
+	
+	@Test
+	public void powerTesting() throws PowerException, FactorialException
+	{
+		// this test is used for finding that whether or not function will generate value for whose power is negative.
+		assertEquals(Math.pow(2, -1), TrigonometricFunctions.power(2, -1), "Negative power can't be calculated by this function.");
 	}
 
 
