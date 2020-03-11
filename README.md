@@ -38,7 +38,7 @@ serise and tested using JUnit in this project.
 
 3) Checking accuracy of Trigonometric Fucntions in Degree
 
--   Third Test case is used for whether the functions are converting degree values to trigonometric function values. For, that We convert degree to radian value.
+-   Third Test case is used for whether the functions are converting degree inputs to trigonometric values. For, that We convert degree to radian value.
    
 ![Test Case3 Output](https://gitlab.cs.uwindsor.ca/group-6/trigonometric-junit-testing/-/blob/master/Trigonometric-JUnit-Testing/Screenshots/Version3-Result.png)
 
